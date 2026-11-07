@@ -1,0 +1,22 @@
+{
+  "name": "Game-TLO game development",
+  "image": "mcr.microsoft.com/devcontainers/cpp:1-bookworm",
+  "hostRequirements": {
+    "cpus": 32,
+    "memory": "64gb",
+    "storage": "128gb"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libvulkan-dev mesa-vulkan-drivers ninja-build vulkan-tools && git lfs install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "llvm-vs-code-extensions.vscode-clangd"
+      ]
+    }
+  }
+}
